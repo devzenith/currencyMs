@@ -1,0 +1,25 @@
+server:
+  port: 9098
+spring:  
+  h2:
+    console:
+      enabled: true
+      path: /h2
+      settings:
+        web-allow-others: true
+  datasource:
+    url: ${currencyinventoryms.datasource.url}
+    username: ${currencyinventoryms.datasource.username}
+    password: ${currencyinventoryms.datasource.password}    
+  jpa:
+    show-sql: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        
+feign:
+  hystrix:
+    enabled: true
+       

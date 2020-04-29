@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    config:
+      uri: ${currencyinventoryms.config.server.url:http://localhost:8888}
+      fail-fast: true
+      
+  application:    name: currencyinventoryms
+  profiles:    active: dev    
+   
+      
